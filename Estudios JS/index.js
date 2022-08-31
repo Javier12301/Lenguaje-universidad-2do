@@ -1,3 +1,9 @@
+
+//Forma de conectar con otro archivo de texto//
 const op = require('./Operaciones');
 
-console.log(op.suma(3, 5));
+
+//Modulo//
+console.log(op.getNom());
+
+//console.log(op.suma(3, 5));
