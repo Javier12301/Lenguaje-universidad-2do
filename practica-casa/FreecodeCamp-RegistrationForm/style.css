@@ -4,6 +4,26 @@ body{
     margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+h1, p{
+    margin: 1em auto;
+    text-align: center;
+}
+
+/*Centrar form
+    Útilizamos VW el cual es viewport (Ancho del dispositivo)
+    Nos sirve para especificar el ancho visible del dispositivo
+    Si nosotros aplicamos 10vw estaremos usando el 10% del ancho visible
+*/
+
+form{
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
 }
 
 label{

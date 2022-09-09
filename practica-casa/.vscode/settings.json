@@ -1,9 +1,18 @@
 {
     "cSpell.words": [
+        "Centrar",
         "cuenta",
         "elija",
         "pedirá",
         "quiere",
         "usuario"
-    ]
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:practica-casa}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }
