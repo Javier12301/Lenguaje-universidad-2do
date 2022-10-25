@@ -1,3 +1,34 @@
+		//CREAMOS LA APP EXPRESS//
+
 1. Para comenzar el backend y crear el json package utilizamos *npm init -y*
 
-2. 
+2. para instalar express y mongoose utilizamos *npm i express cors mongoose*
+
+3. También instala nodemon como dependencia de desarrollo *npm i nodemon -D*
+
+4. Cambiamos en el package.json "scripts" -> "test" y lo cambiamos por "dev": "nodemon App.js"
+
+5. Ahora creamos un nuevo archivo llamado App.js según el nombre que pusimos en la parte 4.
+
+6. En app.js importamos express y cors, inicializamos express, ponemos en escucha al servidor según el puerto que nostros quieramos utilizar y exportamos el modulo para que pueda ser compartido con los otros archivos.
+
+			//DATABASE//
+
+7. Creamos una carpeta "Database" y dentro de ella creamos un index.js.
+
+8. En el index.js importamos mongoose, estrablecemos la URL de nuestra base de datos, luego creamos una promesa la cuál nos devolverá un resultado si la base de dato se encuentra funcionando con exito o nos mandará un error el cuál pasará por el catch que la base de datos no se encuentra funcionando.
+
+9. Una vez creado el modulo db() crearemos una función db() en App.js donde se encuentra la variable de escucha en el puerto 4000, esto se debe porque cuando nosotros ponemos en funcionamiento el servidor, también pondrá en funcionamiento la base de datos.
+
+10. Ejecumatos el servidor para hacer una prueba con "npm run dev" y sí funciona con exito estará todo correcto.
+
+			//MODELS//
+11. Ahora Creamos una Carpeta que se llama "Models"
+
+12. En la carpeta models crearemos 2 archivos, uno que será el El carrito Cart.js y el otro que será los productos Products.js
+
+13. En Cart.js importamos mongoose model y schema, luego creamos un nuevo schema con las propiedades que necesitamos y el tipo de estas y si serán unicas (name, img, amount, price)
+
+14. Al igual que Cart.js creamos también lo mismo para Products.js sólo que utilizaremos las propiedades (name, img, inCart, price)
+
+			//Controllers//
