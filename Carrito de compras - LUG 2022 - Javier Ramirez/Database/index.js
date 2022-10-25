@@ -11,7 +11,7 @@ const MONGO_URL= "mongodb://localhost/ShoppingCart-Javier";
 const db = async() => {
     await mongoose
         .connect(MONGO_URL)
-        .then(() => console.log("¡DataBase Funcionando con exito!")
+        .then(() => console.log("¡DataBase Funcionando con exito!"))
         .catch((error) => console.error(error))
 };
 
