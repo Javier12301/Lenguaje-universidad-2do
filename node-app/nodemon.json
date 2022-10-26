@@ -3,8 +3,8 @@
         "src"
     ],
     "ext": "ts",
-    "ignore": [
+    "ingore": [
         "src/**/*.spec.ts"
     ],
-    "exe": "ts-node ./src/index.ts"
+    "exec": "ts-node ./src/index.ts"
 }

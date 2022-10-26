@@ -5,7 +5,9 @@ import express from 'express';
 const app = express();
 
 //Configuraciones
-app.set('port', 3000);
+/*process.env.PORT es por si nosotros tenemos un puerto en la nube, pero si no existe utilizamos 
+el default que configuramos*/
+app.set('port', process.env.PORT || 3000);
 
 //programas intermedios -> Middlewares
 

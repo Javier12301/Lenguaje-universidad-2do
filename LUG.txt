@@ -72,10 +72,10 @@ podemos configurar nodemon creando un json -> nodemon.json al cual le pondremos 
         "src"
     ],
     "ext": "ts",
-    "ignore": [
+    "ingore": [
         "src/**/*.spec.ts"
     ],
-    "exe": "ts-node ./src/index.ts"
+    "exec": "ts-node ./src/index.ts"
 }
 
 una vez configurado nodemon, vamos a package.json y ponemos en script el siguiente comando
