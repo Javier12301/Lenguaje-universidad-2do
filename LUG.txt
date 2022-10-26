@@ -4,7 +4,7 @@
 
 2. para instalar express y mongoose utilizamos *npm i express cors mongoose*
 
-3. También instala nodemon como dependencia de desarrollo *npm i nodemon -D*
+3. También instala nodemon como dependencia de desarrollo *npm i typescript -D*
 
 4. Cambiamos en el package.json "scripts" -> "test" y lo cambiamos por "dev": "nodemon App.js"
 
