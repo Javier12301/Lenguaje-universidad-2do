@@ -42,5 +42,45 @@ luego debajo de "compilerOptios"[], " le agregamos una coma y ponemos lo siguien
   ]
 esto es para que incluya en la traducción todo lo que sea typescript en src y todo lo demas, también para que excluya node_modules.
 
- 
+///// Comienzo de programación con TYPESCRIPT Backend///
+
+1. Nos dirigimos a index.ts y escribimos el siguiente comando npm i @types/express -D esto nos ayudará en el auto completado del código.
+
+2. podemos instalarle los siguientes comando a nuestro json: 
+
+"scripts": {
+    "ts:node": "ts-node src/index.ts" 
+    "clean": "rm -rf build",
+    "build": "tsc",
+    "start": "node build/src"
+  },
+
+el primer comando ts:node sirve para ejecutar sin traducirlo. antes de eso tenemos que instalar como dependencia a typescript -> npm i typescript -D
+y también npm i ts-node -D
+
+para ejecutar los comandos ponemos npm run *el_comando*
+
+//NODEMON
+3. instalamos el framework nodemon, este sirve cada vez que hagamos un cambio al código, reinicie el servidor e inserte lo nuevo.
+
+npm i nodemon -D
+
+podemos configurar nodemon creando un json -> nodemon.json al cual le pondremos que vigile los cambios de la carpeta source ->
+
+{
+    "watch": [
+        "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+        "src/**/*.spec.ts"
+    ],
+    "exe": "ts-node ./src/index.ts"
+}
+
+una vez configurado nodemon, vamos a package.json y ponemos en script el siguiente comando
+
+"dev": "nodemon"
+
+y ya con esto tendremos nodemon y cada vez que terminemos el código se refrescará.
 
