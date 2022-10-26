@@ -2,44 +2,45 @@
 
 1. Para comenzar el backend y crear el json package utilizamos *npm init -y*
 
-2. para instalar express, typescript y mongoose utilizamos *npm i express typescript mongoose*
+2. para instalar express, typescript y mongoose utilizamos *npm i express express-handlebars typescript mongoose*
 
-3. También instala nodemon como dependencia de desarrollo *npm i nodemon -D*
+*express es un framework de nodejs que sirve para comunicarse con el servidor, mongoose es un modulo de conexión.*
 
-4. Cambiamos en el package.json "scripts" -> "test" y lo cambiamos por "dev": "nodemon App.js"
+3. Creamos una carpeta *src* donde guardaremos todo el código fuente del proyecto.
 
-5. Ahora creamos un nuevo archivo llamado App.js según el nombre que pusimos en la parte 4.
+4. dentro de src crearemos un index.ts o server.ts donde estará el código de arranque del servidor.
 
-6. En app.js importamos express y cors, inicializamos express, ponemos en escucha al servidor según el puerto que nostros quieramos utilizar y exportamos el modulo para que pueda ser compartido con los otros archivos.
+5. Crear las carpetas:
 
-			//DATABASE//
+//routes: en esta carpeta se guardarán las rutas.
 
-7. Creamos una carpeta "Database" y dentro de ella creamos un index.js.
+//models: guardaremos los modelos de la base de datos.
 
-8. En el index.js importamos mongoose, estrablecemos la URL de nuestra base de datos, luego creamos una promesa la cuál nos devolverá un resultado si la base de dato se encuentra funcionando con exito o nos mandará un error el cuál pasará por el catch que la base de datos no se encuentra funcionando.
+//controllers: aquí se guardarán las funciones que se invoquen desde la aplicación cliente, como ejemplo Agregar un producto al carrito.
 
-9. Una vez creado el modulo db() crearemos una función db() en App.js donde se encuentra la variable de escucha en el puerto 4000, esto se debe porque cuando nosotros ponemos en funcionamiento el servidor, también pondrá en funcionamiento la base de datos.
+//lib: se guardarán los códigos para compartir y ser reutilizados.
 
-10. Ejecumatos el servidor para hacer una prueba con "npm run dev" y sí funciona con exito estará todo correcto.
+//views: donde se guardarán archivos HTML para el frontend.
 
-			//MODELS//
-11. Ahora Creamos una Carpeta que se llama "Models"
+6. creamos un archivo database.ts creado unicamente para guardar la base de datos y otro archivo donde podemos guardar nuestras contraseñas *keys.ts* (opcional) sólo para servicios de correo y contraseña.
 
-12. En la carpeta models crearemos 2 archivos, uno que será el El carrito Cart.js y el otro que será los productos Products.js
+7. Ahora, para trabajar en typescript debemos especificarle que trabajaremos en el lado de servidor, por lo tanto primero instalamos typescript: *npm i -g typescript*
 
-13. En Cart.js importamos mongoose model y schema, luego creamos un nuevo schema con las propiedades que necesitamos y el tipo de estas y si serán unicas (name, img, amount, price)
+8. para configurar el comportamiento de typescript según lo que deseemos utilizar tenemos que poner el comando *typescript --init*
 
-14. Al igual que Cart.js creamos también lo mismo para Products.js sólo que utilizaremos las propiedades (name, img, inCart, price)
+9. En tsconfig.json buscamos "outDir", descomentamos y ponemos la dirección "./build/src" esto es para que guarde todo el código convertido a javascript en una carpeta build dentro de una carpeta src. 
 
-			//Controllers//
-15. Creamos una carpeta llamada Controllers
+también descomentamos "moduleresolution" para traducir node.
 
-16. Creamos un index.js y dentro de index.js pondremos todo los controladores que usaremos como ("obtener productos, obtener productos del carrito, agregar producto al carrito, poner productos, eliminar productos") y luego creamos un modulo para exportar las variables a cualquier archivo.
+luego debajo de "compilerOptios"[], " le agregamos una coma y ponemos lo siguiente: 
 
-17. Creamos un archivo.js de *cada uno de los controladores creados*
+"include":[
+    "./src/**/*"
+  ],
+  "exclude":[
+    "node_modules"
+  ]
+esto es para que incluya en la traducción todo lo que sea typescript en src y todo lo demas, también para que excluya node_modules.
 
-18. Ahora en app.js creamos las rutas y los http metodos de cada controlador e importamos sus controles.
-
-
-
+ 
 
