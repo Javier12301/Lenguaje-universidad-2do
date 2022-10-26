@@ -32,3 +32,14 @@
 14. Al igual que Cart.js creamos también lo mismo para Products.js sólo que utilizaremos las propiedades (name, img, inCart, price)
 
 			//Controllers//
+15. Creamos una carpeta llamada Controllers
+
+16. Creamos un index.js y dentro de index.js pondremos todo los controladores que usaremos como ("obtener productos, obtener productos del carrito, agregar producto al carrito, poner productos, eliminar productos") y luego creamos un modulo para exportar las variables a cualquier archivo.
+
+17. Creamos un archivo.js de *cada uno de los controladores creados*
+
+18. Ahora en app.js creamos las rutas y los http metodos de cada controlador e importamos sus controles.
+
+
+
+
